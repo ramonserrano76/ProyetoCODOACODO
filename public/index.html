@@ -285,14 +285,42 @@
         <div id="contact">
             <footer id="contact" class="contact">
                 <div>
-                    <h4>Home Address</h4>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.71095863172!2d-58.35200408423477!3d-34.68724376943054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3332011d07a8d%3A0x3de9387defe81e6e!2sGral.%20Madariaga%20607%2C%20B1872CMK%20Sarand%C3%AD%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1653767584254!5m2!1sen!2sar"
-                        width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <li class="">
+                        <div class="clock">
+                            <div class="display">
+                            </div>
+                        </div>
+                        <script>
+                            setInterval(function () {
+                                const clock = document.querySelector(".display");
+                                let time = new Date();
+                                let sec = time.getSeconds();
+                                let min = time.getMinutes();
+                                let hr = time.getHours();
+                                let day = 'AM';
+                                if (hr > 12) {
+                                    day = 'PM';
+                                    hr = hr - 12;
+                                }
+                                if (hr == 0) {
+                                    hr = 12;
+                                }
+                                if (sec < 10) {
+                                    sec = '0' + sec;
+                                }
+                                if (min < 10) {
+                                    min = '0' + min;
+                                }
+                                if (hr < 10) {
+                                    hr = '0' + hr;
+                                }
+                                clock.textContent = hr + ':' + min + ':' + sec + " " + day;
+                            });
+                        </script>
+                    </li>
                     <iframe class="spotify" src="https://open.spotify.com/embed/playlist/0b9ZiiZoK6mkQRjXOSWkQa"
                         frameBorder="0" allowfullscreen=""
-                        allow="autoplay;shuffle ;clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        allow="autoplay ;clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
 
                 </div>
@@ -301,27 +329,37 @@
                         <h2 class="contact__title">Contact me</h2>
                     </div><a href="mailto:ramonserrano76@gmail.com" class=""><button
                             class="btn-secondary btn--degrade   ">Contact</button></a>
+                    <div class="c-information">
+                        <div class="links">
+                            <a class="acerca_img" href="https://github.com/ramonserrano76" target="_blank"
+                                rel="noopener noreferrer"></a>
+                            <a class="acerca_img" href="https://www.linkedin.com/in/ramonserrano76/" target="_blank"
+                                rel="noopener noreferrer"></a>
+                        </div>
+                    </div>
 
+                    <!-- <div class="links">
+                        <ul class="list">
+                            <li class="acerca_img"><a href="https://github.com/ramonserrano76" target="_blank"
+                                    rel="noopener noreferrer"></a>
 
-
-                    <ul class="list">
-                        <li class="list__item"><a href="https://github.com/ramonserrano76" target="_blank"
-                                class="list__item">
-
-                                <!-- <i
-                                           class="fab fa-github fa-3x   "></i> -->
-                                <img src="https://1.bp.blogspot.com/-1mbBK1XVI1o/YU6ndDON6ZI/AAAAAAAAJ50/G3gEU09XgnMGxBVFefwmyZWN2ds3JoTSgCLcBGAsYHQ/s320/git.png"
+                                
+                                <img class="acerca_img"
+                                    src="https://1.bp.blogspot.com/-1mbBK1XVI1o/YU6ndDON6ZI/AAAAAAAAJ50/G3gEU09XgnMGxBVFefwmyZWN2ds3JoTSgCLcBGAsYHQ/s320/git.png"
                                     width="48">
-                            </a></li>
-                        <li class="list__item"><a href="https://www.linkedin.com/in/ramonserrano76/" target="_blank"
-                                class="list__item">
+                                </a>
+                            </li>
+                            <li class="acerca_img"><a href="https://www.linkedin.com/in/ramonserrano76/" target="_blank"
+                                    rel="noopener noreferrer"></a>
 
-                                <!-- <i   
-                                        class="fab fa-linkedin fa-3x   "></i> -->
-                                <img src="https://1.bp.blogspot.com/-HAZ1gyE3O4A/YU6l_ofp6_I/AAAAAAAAJ5o/srN8AMk0bwQIyOiXV-Y9i_ulgZHoH4SyACLcBGAsYHQ/s200/linkedin.png"
+                                
+                                <img class="acerca_img"
+                                    src="https://1.bp.blogspot.com/-HAZ1gyE3O4A/YU6l_ofp6_I/AAAAAAAAJ5o/srN8AMk0bwQIyOiXV-Y9i_ulgZHoH4SyACLcBGAsYHQ/s200/linkedin.png"
                                     width="48">
-                            </a></li>
-                    </ul>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> -->
                 </div>
                 <p class="about__paragraph">© Copyright Ramón Serrano 2022</p>
             </footer>
