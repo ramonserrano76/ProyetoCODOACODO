@@ -12,6 +12,15 @@ jQuery('document').ready(function($){
     });
         
 });
+jQuery('document').ready(function ($) {
+    let toggle2 = document.getElementById('toggle');
+    let nav = document.getElementById('nav');
+
+    toggle2.addEventListener('click', function () {
+        nav.classList.toggle('nav__open');
+    });
+});
+
 // if (menu.hasclass('nav__open')) {
 
         //     menu.addclass('nav')
