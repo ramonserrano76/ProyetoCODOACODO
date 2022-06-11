@@ -21,7 +21,7 @@
         <nav class="menu">
             <div class="container container-fluid">
                 <ng-container *ngIf="(user$ | async) === null; else logOutTemplate">
-                    <ul class="nav nav--hightlighted nav--sticky nav__open">
+                    <ul class="nav nav--hightlighted nav--sticky">
                         <li class="nav__brand"><a class="rainbow rainbow_text_animated" [routerLink]="['/home']">
                                 <span>R</span>amón <span>S</span>errano.</a></li>
                         <li class="nav__item">
@@ -40,7 +40,7 @@
                 </ng-container>
 
                 <ng-container class="container">
-                    <ul class=" nav nav--hightlighted nav--sticky nav__open">
+                    <ul class=" nav nav--hightlighted nav--sticky">
                         <li class="nav__item"><a href="../#about">About</a></li>
                         <li class="nav__item"><a href="../#skills">Skills</a></li>
                         <li class="nav__item"><a href="../#projects">Projects</a></li>
@@ -48,7 +48,7 @@
                     </ul>
                 </ng-container>
                 <ng-template #logOutTemplate>
-                    <ul class="nav nav--hightlighted nav--sticky nav__open">
+                    <ul class="nav nav--hightlighted nav--sticky">
                         <li class=" nav__item">
                             <a class="nav__link" aria-current="page" href="../index.html"
                                 (click)="onLogout()">Logout<button class="button" tabindex="2"><img
@@ -112,7 +112,7 @@
         <div class="text-center">
             <h1 class="">Sign In</h1>
         </div>
-        <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="authForm" (ngSubmit)="onSubmit()" id="form">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
                 <input formControlName="email" type="email" required class="form-control" id="exampleInputEmail1"

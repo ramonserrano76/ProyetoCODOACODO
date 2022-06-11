@@ -20,6 +20,32 @@ toggle2.addEventListener('click', function () {
     nav.classList.toggle('nav__open');
 });
 });
+jQuery('document').ready(function ($) {
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('form').addEventListener('submit', validateForm);
+});
+
+function validateForm(evento) {
+    evento.preventDefault();
+    var email = document.getElementById('exampleInputEmail1').value;
+    var expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    if (email.length == 0) {
+        alert('El correo electrónico no puede estar vacio.');
+        return;
+    }
+    var password = document.getElementById('exampleInputPassword1').value;
+    if (expReg.test(password) == false) {
+        alert("La clave no puede estar vacía.");
+    }
+    // var msj = document.getElementById('msj').value;
+    // if (msj.length == 0) {
+    //     alert('La consulta no puede ser nula.');
+    //     return;
+    // }
+    alert('Su consulta fue recibida. Nos pondremos en contacto lo antes posible.')
+    this.submit();
+}
+});
 // if (menu.hasclass('nav__open')) {
 
         //     menu.addclass('nav')
