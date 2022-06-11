@@ -657,7 +657,7 @@ header {
     transition: 0.5s;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1146px) {
     .toggle {
         display: block;
     }
