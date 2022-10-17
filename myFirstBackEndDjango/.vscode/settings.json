@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./pig_project/videos",
+        "./pig_project/videos",
+        "./pig_project/videos"
+    ]
+}
